@@ -6,6 +6,12 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
+    server: {
+    allowedHosts: [
+      'fantinebd.com',
+      'www.fantinebd.com',
+    ],
+  },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
